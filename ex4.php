@@ -13,11 +13,11 @@ function devinetteNombre($saisie)
 {
   $saisie ;
   $n = 1 ;
-  $nom = rand(0, 3) ;
+  $nom = rand(0, 100) ;
   while ($saisie <> $nom){
-    echo "entrer un nombre entre 0 et 3" ;
+    echo "entrer un nombre entre 0 et 100" ;
     echo PHP_EOL ;
-    $saisie = rand(0, 3) ;
+    $saisie = rand(0, 100) ;
     if ($saisie < $nom){
       echo "trop petit" ;
       echo PHP_EOL ;      
