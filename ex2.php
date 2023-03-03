@@ -1,16 +1,36 @@
 <?php
 
-function survivre($sexe, $age)
+
+function survivreFemme($age)
 {
-  if (($sexe === "femme") && (($age < 18) || ($age >= 18))){
+  if (($age < 18) || ($age >= 18)){
     return true ;
   } 
-  if (($sexe === "homme") && ($age < 18)) {
+  
+}
+
+function survivreHomme($age)
+{
+  if  ($age < 18) {
     return true ;
   }
-  else if (($sexe === "homme") && ($age >= 18)) {
+  else if ($age >= 18) {
     return false ;
   }
+}
+
+function survivre($sexe, $age)
+{
+  // condition femme
+  
+  if ($sexe === "femme"){ 
+    return survivreFemme($age) ;
+  } 
+  //condition homme
+  if ($sexe === "homme"){
+    return survivreHomme($age) ;
+  }
+  
   return "error" ;
 }
 
@@ -18,4 +38,7 @@ var_dump(survivre("femme", 18));
 echo PHP_EOL ;
 
 var_dump(survivre("homme", 18));
+echo PHP_EOL ;
+
+var_dump(survivre("maison", 18));
 echo PHP_EOL ;
