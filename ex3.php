@@ -13,7 +13,7 @@ Exemple : afficherÉtoilesMultilignes(3) =>
 
  function  afficherÉtoiles($bn_étoiles)
 { 
-  $result = " " ;
+  $result = "" ;
   $compteur = 1 ;
   while ($compteur <= $bn_étoiles) {
     $result = $result . "*" ;
@@ -23,7 +23,7 @@ Exemple : afficherÉtoilesMultilignes(3) =>
 }
 function afficherÉtoilesMultiligne($nb_étoiles)
 {
-  $result = " " ;
+  $result = "" ;
   $compteur = 1 ;
   while ($compteur <= $nb_étoiles) {
     $result = $result . "*" ;
@@ -55,9 +55,9 @@ function afficherEspaceEtoile($nb_étoiles)
 
 function afficherÉtoilesMultilignesRTL($nb_étoiles)
 { $k = "" ;
-  $result = " " ;
+  $result = "" ;
   $compteur = 1 ;
-  $p = " " ;
+  $p = "" ;
   while ($compteur <= $nb_étoiles) {
     $k = afficherEspaceEtoile($nb_étoiles) ;
     $p = $p . "*" ;
@@ -73,7 +73,7 @@ afficherÉtoiles(4) ;
 echo PHP_EOL ;
 
 
-afficherÉtoilesMultiligne(4) ;
+afficherÉtoilesMultiligne(4) ; 
 echo PHP_EOL ;
 
 
