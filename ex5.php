@@ -5,12 +5,10 @@
 Vous aurez donc besoin de mémoriser les différentes tentatives du joueur dans un tableau. */
 
 
-function nombreExisteDeja()
+function nombreExisteDeja($saisie, $tab)
 {
-  $tab = [] ;
   $i = 0 ;
-  $saisie = rand(0, 5) ;
-  $tab[] = $saisie ;
+ 
   while ($i < count($tab)){
     if ($saisie == $tab[$i]){
       echo "Déjà tenté" ;
@@ -19,21 +17,22 @@ function nombreExisteDeja()
     } 
     $i = $i + 1 ;
   }
+  $tab[] = $saisie ;
   return $saisie ;
 }
 
 
 function devinetteNombreTab()
 {
-  
   $n = 1 ;
   $nom = rand(0, 5) ;
   $saisie = rand(0, 5) ;
+  $tab = [$nom];
   while ($saisie <> $nom){
     echo "entrer un nombre entre 0 et 5" ;
     echo PHP_EOL ;
-    
-    nombreExisteDeja() ;
+    $saisie = rand(0, 5) ;
+    nombreExisteDeja($saisie, $tab) ;
     if ($saisie < $nom){
       echo "trop petit" ;
       echo PHP_EOL ;      
